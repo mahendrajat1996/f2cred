@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header><h1>Student Management CRUD</h1></header>
+      <main>
+        <!-- input from the user -->
+        <section>
+          <form id="studentForm">
+            <div class="input_section">
+              <input type="text" id="nameInput" placeholder="Name" required />
+              <input type="email" id="emailInput" placeholder="Email" required/>
+              <input type="text" id="gradeInput" placeholder="Grade" required />
+              <input type="number" id="ageInput" placeholder="Age" required />
+              <input type="text" id="degreeInput" placeholder="Degree" required/>
+            </div>
+            <button type="submit" id="submitButton">Add Student</button>
+            <button type="button" id="cancelButton">Cancel</button>
+          </form>
+          <input type="text" id="searchInput" placeholder="Search by Name, Email, or Degree"/>
+        </section>
+        <!-- maintan TAble for student mangement-->
+        <section>
+          <table border="2" id="studentTable">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>DRADE</th>
+                <th>Degree</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="studentTableBody">
+              <!-- Student rows will be dynamically generated here -->
+            </tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+    <div class="popup">
+        <div class="dialogBox">
+            <p>This student already exist</p>
+            <button id="ok">OK</button>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

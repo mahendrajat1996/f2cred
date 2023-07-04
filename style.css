@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #111111;
+    color: #ffff;
+    font-family: sans-serif;
+    overflow-y: scroll;
+    position: relative;
+}
+.popup{
+    display: none;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.55);
+    width: 100%;
+    height: 100%;
+}
+.dialogBox{
+    position: absolute;
+    /* border: 2px solid red; */
+    background-color: #ffff;
+    color: #111111;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 100px;
+    width: 20rem;
+    text-align: center;
+    padding-top: 1rem; 
+    font-size: 1.5rem;
+    animation: popingUp 0.5s linear;
+}
+.dialogBox button{
+    display: inline-block;
+    margin-top: 1rem;
+    width: 5rem;
+    height: 2rem;
+    background-color: rgb(60, 60, 234);
+    color: #ffff;
+}
+@keyframes popingUp{
+    from{
+        top: 53%;
+        opacity: 0.3;
+    }
+    to{
+        top: 50%;
+    }
+}
+.container{
+    max-width: 1080px;
+    margin: auto;
+    /* border: 2px solid red; */
+}
+.container h1{
+    text-align: start;
+    margin-bottom: 1rem;
+}
+.container .input_section{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.5rem;
+}
+@media screen and (max-width: 620px) {
+    .container .input_section{
+        grid-template-columns: repeat(2,1fr);
+        
+    }
+}
+.container .input_section input{
+    height: 2.5rem;
+    background-color: #111111;
+    border: 1px solid #ffff;
+    padding-left: 1rem;
+    color: #ffff;
+}
+ 
+.container form  button{
+    margin: 3rem 0;
+    width: 40%;
+    height: 2.5rem;
+    cursor: pointer;
+}
+ 
+
+
+ 
+.container #searchInput{
+    height: 2.5rem;
+    width: 95%;
+    background-color: #111111;
+    border: 1px solid #ffff;
+    padding-left: 1rem;
+    color: #ffff;
+    margin-bottom: 2rem;
+}
+#cancelButton{
+    display: none;
+}
+
+
+
+
+/* ************************** Table Style *************** */
+table thead tr{
+    height: 2.5rem;
+}
+table, tr, td{
+    border: 1px solid #ffff;
+    border-collapse: collapse;
+}
+.table_section{
+    overflow: auto;
+}
+table{
+    width: calc(1080px*0.95);
+    /* min-height: 514px; */
+    
+}
+ 
+tbody tr{
+    /* border: 1px solid blue; */
+    height: 32px;
+    
+}
+ 
+tbody tr td{
+    padding-left: 1rem;
+   
+}
+tbody tr td:nth-child(3){
+    width: 25%;
+   
+}
+tbody tr td:nth-child(4){
+    width: 12%;
+}
+tbody tr td:nth-child(5){
+    width: 12%;
+}
+tbody tr td:last-child{
+    width: 20%;
+    
+}
+ 
